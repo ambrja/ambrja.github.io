@@ -1,19 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+
+    <title>Interaktivní mapa krajů ČR</title>
+    <link rel="stylesheet" href="main.css">
+</head>
 <body>
-
-<svg width="600" height="100" xmlns="http://www.w3.org/2000/svg">
-    <rect id="BlueSquare" stroke="blue" height="80" width="23" 
-        stroke-width="5" fill="#ffffff">
-        <animate attributeName="x" attributeType="XML" begin="g_anim.end" 
-            dur="3s" fill="freeze" from="0" to="300"/>
-    </rect>
-
-    <rect id="GreenSquare" stroke="green" height="80" width="67" 
-        stroke-width="5" fill="#ffffff">
-        <animate id="g_anim" attributeName="x" attributeType="XML" 
-            begin="0s" dur="6s" fill="freeze" from="300" to="0"/>
-    </rect>
-</svg>
-
+    <div id="content">
+        <div id="map">
+            <object id="svg-kraje" data="kraje.svg" type="image/svg+xml"></object>
+        </div>
+        <div id="information">
+            <h4>Počty obyvatel v jednotlivých letech:</h4>
+            <p class="year-label">Rok 1991</p>
+                <p id="year-1991" class="year">N/A</p>
+            <p class="year-label">Rok 2001</p>
+                <p id="year-2001" class="year">N/A</p>
+            <p class="year-label">Rok 2011</p>
+                <p id="year-2011" class="year">N/A</p>
+        </div>
+    </div>
+    <script src="map.js"></script>
 </body>
 </html>
